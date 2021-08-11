@@ -19,11 +19,13 @@ var patientsController = require('./controllers/patientsController');
 var doctorsController = require('./controllers/doctorsController');
 var nursesController = require('./controllers/nursesController');
 var roomsController = require('./controllers/roomsController');
+var userController = require('./controllers/userController');
 
 app.use('/api', patientsController);
 app.use('/api', doctorsController);
 app.use('/api', nursesController);
 app.use('/api', roomsController);
+app.use('/api', userController);
 
 // launch our backend into a port
 app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));

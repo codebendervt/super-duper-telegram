@@ -55,6 +55,7 @@ class DefaultLayout extends Component {
         if (!this.state.loggedIn) {
             let user = utils.getCookie("user");
             if (user !== null)
+        
                 this.setState({
                     loggedIn: true,
                     user: JSON.parse(user)

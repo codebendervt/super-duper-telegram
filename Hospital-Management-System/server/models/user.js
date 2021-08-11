@@ -7,7 +7,9 @@ const userSchema = new Schema({
     mobile: String,
     address: String,
     gender: String,
+    role: String,
     disease: String,
+    password: String
 });
 
 // export the new Schema so we could modify it using Node.js

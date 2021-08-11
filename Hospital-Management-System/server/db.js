@@ -2,7 +2,7 @@
 
 // this is our MongoDB database
 const dbRoute =
-    "mongodb+srv://admin:admin@cluster0-yual5.mongodb.net/test?retryWrites=true";
+    "mongodb+srv://admin:admin@cluster0.ci7kz.mongodb.net/user?retryWrites=true&w=majority";
 
 // connects our back end code with the database
 mongoose.connect(dbRoute, { useNewUrlParser: true });

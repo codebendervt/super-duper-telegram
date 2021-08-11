@@ -14,6 +14,8 @@ const patientSchema = new Schema({
     dateAdmitted: Date,
     dateDischarged: Date,
 
+    //user information
+
     //doctor: { type: mongoose.Schema.Types.ObjectId, ref: Doctor }
     doctorId: Number,
     nurseId: Number,

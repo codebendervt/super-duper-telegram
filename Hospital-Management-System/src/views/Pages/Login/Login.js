@@ -12,7 +12,7 @@ class Login extends Component {
     }
     
     loginSuccessHandler = (user) => {
-        utils.setCookie('user', JSON.stringify({ userId: user.userId, role: user.role }));
+        utils.setCookie('user', JSON.stringify({ userId: user.userId, role: user.password }));
         utils.executeAfterDelay(() => this.props.history.push('/'), 500);
     }
 
@@ -24,9 +24,12 @@ class Login extends Component {
             password: e.target.elements['password'].value
         }
 
-        Axios.post('api/login', data)
-            .then(res => this.loginSuccessHandler(res.data))
-            .catch(error => console.log(error));
+        this.loginSuccessHandler({userId: data.username, password:data.password})
+
+
+        // Axios.post(`http://localhost:3001/api/users/${data.username}`, data)
+        //     .then(res => this.loginSuccessHandler({userId: data.username, password:data.role}))
+        //     .catch(error => console.log(error));
     }
 
     render() {

@@ -25,7 +25,7 @@ class Register extends Component {
             privateId: parseInt(e.target.elements['privateId'].value)
         }
 
-        Axios.post('api/register', data)
+        Axios.post('http://localhost:3001/api/users', data)
             .then(res => this.loginSuccessHandler(res.data))
             .catch(error => console.log(error));
     }
